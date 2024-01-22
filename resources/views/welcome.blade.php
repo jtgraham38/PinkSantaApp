@@ -1,4 +1,5 @@
-
+@vite('resources/css/app.css')
+@vite('resources/css/fonts.css')
 @auth
 <div>
     <p>Welcome, {{ auth()->user()->name }}</p>

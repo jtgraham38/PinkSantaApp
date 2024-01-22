@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Didot_Old';
+    src: url('/fonts/old_regular_didot.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Didot_Modern';
+    src: url('/fonts/modern_regular_didot.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Didot_Regular';
+    src: url('/fonts/regular_didot.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Regular_Script';
+    src: url('/fonts/regular_script.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Curvy_Script';
+    src: url('/fonts/curvy_script.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Didot_Old', sans-serif;
+    font-size: medium;
+}
