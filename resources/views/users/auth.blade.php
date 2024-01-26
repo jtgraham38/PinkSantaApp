@@ -1,4 +1,6 @@
 <form action="{{ route('login') }}" method="POST">
+    <h3>Login</h3>
+    <hr>
     @csrf
     <div class="flex flex-col">
         <label for="name">Email:</label>
@@ -11,5 +13,5 @@
 
     <br>
 
-    <button type="submit">Login</button>
+    <button class="hover:text-slate-400" type="submit">Login</button>
 </form>
