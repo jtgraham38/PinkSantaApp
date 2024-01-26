@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 use App\Models\User;
+use App\Models\Event;
 
 class Attendee extends Model
 {
@@ -17,5 +18,10 @@ class Attendee extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(Event::class);
     }
 }
