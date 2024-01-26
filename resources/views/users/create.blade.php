@@ -1,4 +1,6 @@
 <form action="{{ route('users.store')}}" method="POST" prompt="Sign Up">
+    <h3>Sign Up</h3>
+    <hr>
     @csrf
     <div class="flex flex-col">
         <label for="name">Name:</label>
@@ -19,5 +21,5 @@
 
     <br>
 
-    <button type="submit">Sign Up</button>
+    <button class="hover:text-slate-400"  type="submit">Sign Up</button>
 </form>
