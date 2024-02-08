@@ -28,4 +28,4 @@ Route::resource('users', UserController::class)->only([
 Route::post('/login', [UserController::class, 'authenticate'])->name('login');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 
-//this is an example comment for demoing git
+//this is an example comment for demoing git (addition)
