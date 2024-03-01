@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,11 @@ Route::get('/', function () {
 //register and update account details routes
 Route::resource('users', UserController::class)->only([
     'store', 'update'
+]);
+
+//register and update account details routes
+Route::resource('events', EventController::class)->only([
+    'store', 'update', 'delete'
 ]);
 
 //auth routes
