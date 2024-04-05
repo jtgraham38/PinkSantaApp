@@ -85,7 +85,7 @@ class UserController extends Controller
         // //attributes to fill
         // $fillable = ['name','email', 'role'];
 
-        // //update product
+        // //update user
         // $user = User::findOrFail($id);
         // $user->fill($request->only($fillable));
 
