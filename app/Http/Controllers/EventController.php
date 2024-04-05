@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
-use App\Models\User;
+use App\Models\Event;
 
-class UserController extends Controller
+class EventController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -85,7 +85,7 @@ class UserController extends Controller
         // //attributes to fill
         // $fillable = ['name','email', 'role'];
 
-        // //update user
+        // //update product
         // $user = User::findOrFail($id);
         // $user->fill($request->only($fillable));
 
