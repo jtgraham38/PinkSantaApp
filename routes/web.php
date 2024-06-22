@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\AttendeeController;
+use App\AI\AIController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +20,16 @@ use App\Http\Controllers\AttendeeController;
 */
 
 Route::get('/', function () {
+    return view('welcome');
+});
+
+//route for ai testing
+Route::get('/ai', function (){
+
+    $ai_controller = new AIController();
+
+    $ai_controller->send('What is your favorite color?');
+    
     return view('welcome');
 });
 
