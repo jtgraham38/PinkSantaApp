@@ -2,7 +2,7 @@
 @section('template')
     @auth
         <div class="decoration-sky-500/30">
-            <p>Welcome, {{ auth()->user()->name }}</p>
+            <p class="m-8 text-white text-4xl uppercase font-bold text-center text-opacity-100">Welcome, {{ auth()->user()->name }}</p>
 
             <form action="{{ route('logout') }}" method="POST" class="my-0">
                 @csrf
@@ -10,9 +10,11 @@
             </form>
         </div>
     @else
-        <div class="flex flex-row justify-evenly">
-            <div class="border">
-                @if ($errors->any())
+        <div class="grid place-content-center bg-blue-200 h-full justify-center">
+            <h1 class="m-8 text-white text-4xl uppercase font-bold text-center text-opacity-100">Welcome</h1>
+            <div class="flex flex-row m-1 shadow-md bg-white rounded p-2">
+                <div>
+                    @if ($errors->any())
                     <div style="border: 1px solid gray;">
                         <h3>Errors</h3>
                         <ul>
@@ -21,13 +23,15 @@
                             @endforeach
                         </ul>
                     </div>
-                @endif
+                    @endif
 
-                @include('users.auth')
-            </div>
-            <div class="border">
+                    @include('users.auth')
+                </div>
 
-                @if ($errors->any())
+                
+
+                <div>
+                    @if ($errors->any())
                     <div style="border: 1px solid gray;">
                         <h3>Errors</h3>
                         <ul>
@@ -35,11 +39,11 @@
                                 <li>{{ $error }}</li>
                             @endforeach
                         </ul>
-                    </div>
-                @endif
-
-
-                @include('users.create')
+                    @endif
+    
+    
+                    @include('users.create')
+                </div>
             </div>
         </div>
     @endauth
